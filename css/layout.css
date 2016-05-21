@@ -1,0 +1,434 @@
+/* 通用背景设置 */
+.p{background:purple;}
+.c{background:orange;}
+
+/* 水平居中布局1 利用text-align:center;*/
+.center-p-h-1{	
+	text-align:center;
+}
+.center-c-h-1{
+	display:inline-block;
+}
+
+/* 水平居中布局2 利用margin:0 auto;*/
+.center-c-h-2{
+	margin:0 auto;
+    display:table; /* margin:auto;对于inline和inline-block元素不起作用。table宽度为内容宽度*/
+}
+
+/* 水平居中布局3 利用margin:0 auto;利用position:absolute */
+.center-p-h-3{
+	position:relative;
+}
+.center-c-h-3{
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+/* 水平居中布局4 利用display:flex;父元素设置flex之后，子元素宽度等于内容宽度 */
+.center-p-h-4{
+	display:flex;
+	justify-content:center;
+}
+
+/* 水平居中布局5 利用display:flex;父元素设置flex之后，子元素宽度等于内容宽度 */
+.center-p-h-5{
+	display:flex;
+}
+.center-c-h-5{
+	margin:0 auto;
+}
+
+/* ===============================================*/
+
+/*  垂直居中布局1 */
+.center-p-v-1{
+	vertical-align:middle;
+	display:table-cell;
+	height:100px;
+}
+
+/*  垂直居中布局2 */
+.center-p-v-2{
+    position:relative; 
+    height:100px;
+}
+.center-c-v-2{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+/*  垂直居中布局3 */
+.center-p-v-3{
+	display:flex;
+	align-items:center;
+	height:100px;
+}
+
+/* ===============================================*/
+
+/* 水平、垂直都居中布局1 */
+.center-p-1{
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	height:100px;
+	width:200px;
+}
+.center-c-1{
+	display:inline-block;
+}
+
+/* 水平、垂直都居中布局2 */
+
+.center-p-2{
+    position:relative;
+	height:100px;
+	width:200px;
+}
+.center-c-2{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+}
+
+/* 水平、垂直都居中布局3 */
+.center-p-3{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:200px;
+	height:100px;
+}
+
+/* ===============================================*/
+/* 水平列表的底部对齐 */
+
+.b1{
+	background:#99ccff;
+    height:200px;
+}
+.b2{
+	background:#FF6347;
+	height:100px;
+}
+.b3{
+	background:#555555;
+	height:60px;
+}
+.b4{
+	background:#9F79EE;
+	height:80px;
+}
+
+
+.align-b-c {
+	width:100px;
+	margin:0;
+	padding:0;
+}
+/* 水平列表的底部对齐1 */
+.align-b-c-1{
+	display:inline-block;
+    vertical-align:bottom;
+
+}
+
+/* 水平列表的底部对齐2*/
+.align-b-p-2{
+	display:flex;
+    align-items:flex-end;
+}
+
+/* 水平列表的底部对齐2*/
+.align-b-p-3{
+	position:relative;
+	height:200px;
+}
+.align-b-c-3{
+	position:absolute;
+	bottom:0;
+}
+.align-b-c-3:nth-child(2){
+   left:100px;
+}
+.align-b-c-3:nth-child(3){
+   left:200px;
+}
+.align-b-c-3:nth-child(4){
+   left:300px;
+}
+
+/* ===============================================*/
+
+/* 幻灯片 */
+.slider{
+	position:relative;
+	background:#87CEFF;
+	width:400px;
+	height:200px;
+}
+.pointer{
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	bottom:30px;
+}
+i{
+	background:#858585;
+	width:10px;
+	height:10px;
+	border-radius:5px;
+	display:inline-block;
+	margin:0 5px;
+}
+
+/* ===============================================*/
+
+/* 定宽与自适应 */
+.l{
+   width:100px;
+   background-color:#CD3333;
+}
+.r{
+   background:#27408B;
+   height:100px;
+}
+.clear:after{
+   content:"";
+   display:table;
+   clear:both;
+}
+/* 定宽与自适应1 */
+.layout-l-1{
+	float:left;
+}
+.layout-r-1{
+	margin-left:120px;
+}
+
+/* 定宽与自适应2 */
+.layout-l-2{
+	float:left;
+	position:relative;
+}
+
+.right-fix{
+	float:right;
+	width:100%;
+	margin-left:-100px;
+}
+
+.layout-r-2{
+	margin-left:120px;
+}
+
+/* 定宽与自适应3 */
+.layout-l-3{
+	float:left;
+	margin-right:20px;
+}
+.layout-r-3{
+	overflow:hidden;
+}
+
+/* 定宽与自适应4 */
+.layout-p-4{
+	display:flex;
+}
+.layout-l-4{
+	margin-right:20px;
+}
+.layout-r-4{
+	flex:1;
+}
+
+/* 定宽与自适应5 */
+
+.layout-p-5{
+	display:table;
+	width:100%;
+	table-layout:fixed;
+}
+.layout-l-5,.layout-r-5{
+	display:table-cell;
+}
+.layout-r-5{
+	padding-left:20px;
+	background-clip:content-box;
+}
+
+/* ===============================================*/
+
+/* 等分1 */
+.equal-c1{
+	background:#99ccff;
+}
+.equal-c2{
+	background:#FF6347;
+}
+.equal-c3{
+	background:#555555;
+}
+.equal-c4{
+	background:#9F79EE;
+}
+
+.equal-p-1{
+	margin-left:-20px;
+}
+.equal-c-1{
+	float:left;
+	width:25%;
+	padding-left:20px;
+	height:100px;
+	box-sizing:border-box;
+	background-clip:content-box;
+}
+
+/* 等分2 */
+
+.equal-p-2{
+	display:table;
+	height:100px;
+	width:100%;
+}
+.equal-c-2{
+	width:25%;
+	display:table-cell;
+	padding:0 10px;
+	background-clip:content-box;
+}
+/*.equal-c-2>div{width:100%;height:100%;background:orange;}*/
+/* 在display为table的父元素上面移动margin会导致后面的元素也移动*/
+/* 等分3 */
+.equal-p-3{
+	display:flex;
+}
+.equal-c-3{
+	flex:1;
+	height:100px;
+
+}
+
+.equal-c-3+.equal-c-3{
+	margin-left:20px;
+}
+
+/* ===============================================*/
+
+/* 等高 */
+.equal-h-p{
+	overflow:hidden;
+}
+.equal-h-l{
+	width:100px;
+    float:left;
+    margin-right:20px;
+}
+.equal-h-r{
+	overflow:hidden;
+	height:100px;
+}
+.equal-h-l,.equal-h-r{
+	padding-bottom:9999px;
+    margin-bottom:-9999px;
+}
+
+/* ===============================================*/
+/* 不定宽高的全等四宫格 */
+.equal4-p{
+	height:200px;
+	width:200px;
+}
+.equal4-c{
+	background:orange;
+}
+
+/* 全等四宫格1 */
+.equal4-p-1{
+	margin:-10px 0 0 -10px;
+}
+.equal4-c-1{
+	width:50%;
+	height:50%;
+    float:left;
+    padding-top:10px;
+    padding-left:10px;
+    box-sizing:border-box;
+    background-clip:content-box;
+}
+
+/* 全等四宫格2 */
+.equal4-p-2{
+	display:flex;
+	flex-wrap:wrap;
+}
+.equal4-c-2{
+	height:50%;
+	width:50%;
+	box-sizing:border-box;
+	background-clip:content-box;
+	padding-bottom:10px;
+	padding-left:10px;
+}
+/* 全等四宫格3 */
+.equal4-p-3{
+	display:table;
+	height:100px;
+	padding-bottom:10px;
+	table-layout: fixed;
+	box-sizing:border-box;
+}
+.equal4-c-3{
+	display:table-cell;
+	width:25%;
+	height:25%;
+	padding-left:10px;
+	background-color: #fff;
+}
+.equal4-c-3>div{
+	width:100%;
+	height:100%;
+	background-color: #6cf;
+}
+
+
+/* ===============================================*/
+/* 左右定宽，中间自适应 */
+.left,.right,.center{height:100px;}
+.left{background:cornflowerblue;width:100px;}
+.right{background:blueviolet;width:100px;}
+.center{background:chocolate;}
+
+/* 左右定宽，中间自适应1 */
+.left1{float:left;}
+.right1{float:right;}
+.center1{margin:0 110px;}
+
+/* 左右定宽，中间自适应2 */
+.parent2{display:flex;}
+.center2{flex:1;margin:0 10px;}
+
+/* 左右定宽，中间自适应3 */
+.parent3{
+	display:table;
+	width:100%;
+}
+.left3{
+	display:table-cell;	
+}
+.center3{
+	display:table-cell;
+	padding:0 10px;
+	background-clip:content-box;
+}
+.right3{
+	display:table-cell;	
+}
+
+
+
